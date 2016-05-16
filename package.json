@@ -13,7 +13,7 @@
     "name": "Rahul Powar",
     "url": "https://medium.com/@rahulpowar"
   },
-  "main": "./dist/ui-rs-core.umd.js",
+  "main": "./dist/ui-rs-core.umd-es2015.js",
   "jsnext:main": "./src/index.js",
   "dependencies": {
     "bezier-easing": "*"

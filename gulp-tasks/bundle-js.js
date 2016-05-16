@@ -32,7 +32,7 @@ module.exports = function setupTask(gulp, bundles) {
           dest = path.join(config.outputFolder, 'js', config.name || '', config.mainJS.name + '.es2015.js');
           bundleES6(config.mainJS.indexFile, dest, config.externalMappings);
         } else {
-          dest = path.join(config.outputFolder, 'js', config.name || '', config.mainJS.name + '.' + format + '.js');
+          dest = path.join(config.outputFolder, 'js', config.name || '', config.mainJS.name + '.' + format + '-es2015.js');
           transpileES6(config.mainJS.indexFile, dest, format, moduleName, config.externalMappings);
         }
       }
