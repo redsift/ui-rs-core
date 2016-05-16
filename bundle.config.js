@@ -17,7 +17,7 @@ var bundleConfig = {
   },
   styles: [{
     name: 'ui-rs-core',
-    indexFile: './src/styles/index.import.styl'
+    indexFile: './src/index.import.styl'
   }]
 };
 
