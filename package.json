@@ -1,7 +1,7 @@
 {
   "name": "@redsift/ui-rs-core",
   "version": "0.1.6",
-  "description": "Core library with common functionality to be used by UI components.",
+  "description": "Common CSS styles and Javascript functionality for RedsiftUI.",
   "keywords": [
     "redsift-ui",
     "redsift"
