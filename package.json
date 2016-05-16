@@ -1,65 +1,65 @@
 {
-    "name": "@redsift/ui-rs-core",
-    "version": "0.1.5",
-    "description": "Core library with common functionality to be used by UI components.",
-    "keywords": [
-        "redsift-ui",
-        "redsift"
-    ],
-    "repository": "https://github.com/redsift/ui-rs-core",
-    "homepage": "https://github.com/redsift/ui-rs-core",
-    "license": "MIT",
-    "author": {
-        "name": "Rahul Powar",
-        "url": "https://medium.com/@rahulpowar"
-    },
-    "main": "./dist/ui-rs-core.umd.js",
-    "jsnext:main": "./src/index.js",
-    "dependencies": {
-        "bezier-easing": "*"
-    },
-    "scripts": {
-        "serve": "node ./node_modules/gulp/bin/gulp.js serve",
-        "build": "node ./node_modules/gulp/bin/gulp.js build",
-        "test": "echo \"No test specified\" && exit 0",
-        "prepublish": "npm run build"
-    },
-    "devDependencies": {
-        "@redsift/d3-rs-svg": "^0.2.1",
-        "babel-preset-es2015-rollup": "^1.1.1",
-        "babel-runtime": "^6.6.1",
-        "babel-polyfill": "^6.0.16",
-        "babel-preset-es2015": "*",
-        "bower": "*",
-        "browser-sync": "^2.11.1",
-        "browserify": "*",
-        "del": "*",
-        "gulp": "^3.9.0",
-        "gulp-autoprefixer": "*",
-        "gulp-babel": "*",
-        "gulp-closure-compiler": "*",
-        "gulp-concat": "*",
-        "gulp-jshint": "*",
-        "gulp-notify": "*",
-        "gulp-plumber": "^1.0.1",
-        "gulp-rename": "*",
-        "gulp-sourcemaps": "*",
-        "gulp-stylus": "*",
-        "gulp-uglify": "*",
-        "gulp-util": "^3.0.7",
-        "jshint": "*",
-        "normalize.css": "^3.0.3",
-        "gulp-cleancss": "^0.2.2",
-        "lodash": "^4.12.0",
-        "merge-stream": "^1.0.0",
-        "rollup": "^0.26.2",
-        "rollup-plugin-babel": "^2.4.0",
-        "rollup-plugin-buble": "^0.7.0",
-        "rollup-plugin-filesize": "^0.3.4",
-        "rollup-plugin-includepaths": "^0.1.5",
-        "rollup-plugin-json": "^2.0.0",
-        "rollup-plugin-node-resolve": "^1.5.0",
-        "rollup-plugin-string": "^1.0.1",
-        "rollup-plugin-uglify": "^0.3.1"
-    }
+  "name": "@redsift/ui-rs-core",
+  "version": "0.1.5",
+  "description": "Core library with common functionality to be used by UI components.",
+  "keywords": [
+    "redsift-ui",
+    "redsift"
+  ],
+  "repository": "https://github.com/redsift/ui-rs-core",
+  "homepage": "https://github.com/redsift/ui-rs-core",
+  "license": "MIT",
+  "author": {
+    "name": "Rahul Powar",
+    "url": "https://medium.com/@rahulpowar"
+  },
+  "main": "./dist/ui-rs-core.umd.js",
+  "jsnext:main": "./src/index.js",
+  "dependencies": {
+    "bezier-easing": "*"
+  },
+  "scripts": {
+    "serve": "node ./node_modules/gulp/bin/gulp.js serve",
+    "build": "node ./node_modules/gulp/bin/gulp.js build",
+    "test": "echo \"No test specified\" && exit 0",
+    "prepublish": "npm run build"
+  },
+  "devDependencies": {
+    "@redsift/d3-rs-svg": "^0.2.1",
+    "babel-polyfill": "^6.0.16",
+    "babel-preset-es2015": "*",
+    "babel-preset-es2015-rollup": "^1.1.1",
+    "babel-runtime": "^6.6.1",
+    "bower": "*",
+    "browser-sync": "^2.11.1",
+    "browserify": "*",
+    "del": "*",
+    "gulp": "^3.9.0",
+    "gulp-autoprefixer": "*",
+    "gulp-babel": "*",
+    "gulp-cleancss": "^0.2.2",
+    "gulp-closure-compiler": "*",
+    "gulp-concat": "*",
+    "gulp-jshint": "*",
+    "gulp-notify": "*",
+    "gulp-plumber": "^1.0.1",
+    "gulp-rename": "*",
+    "gulp-sourcemaps": "*",
+    "gulp-stylus": "*",
+    "gulp-uglify": "*",
+    "gulp-util": "^3.0.7",
+    "jshint": "*",
+    "lodash": "^4.12.0",
+    "merge-stream": "^1.0.0",
+    "normalize.css": "^3.0.3",
+    "rollup": "^0.26.2",
+    "rollup-plugin-babel": "^2.4.0",
+    "rollup-plugin-buble": "^0.7.0",
+    "rollup-plugin-filesize": "^0.3.4",
+    "rollup-plugin-includepaths": "^0.1.5",
+    "rollup-plugin-json": "^2.0.0",
+    "rollup-plugin-node-resolve": "^1.5.0",
+    "rollup-plugin-string": "^1.0.1",
+    "rollup-plugin-uglify": "^0.3.1"
+  }
 }
