@@ -25,7 +25,6 @@
     "prepublish": "npm run build"
   },
   "devDependencies": {
-    "@redsift/d3-rs-svg": "^0.2.1",
     "babel-polyfill": "^6.0.16",
     "babel-preset-es2015": "*",
     "babel-preset-es2015-rollup": "^1.1.1",
