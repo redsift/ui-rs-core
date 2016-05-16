@@ -1,6 +1,6 @@
 {
-  "name": "ui-rs-core",
-  "version": "1.0.0",
+  "name": "@redsift/ui-rs-core",
+  "version": "0.1.0",
   "description": "Core library with common functionality to be used by UI components.",
   "repository": "https://github.com/Redsift/ui-rs-core",
   "main": "./dist/ui-rs-core.umd.js",
@@ -9,9 +9,10 @@
     "bezier-easing": "*"
   },
   "scripts": {
-    "build": "./node_modules/gulp/bin/gulp.js build",
+    "serve": "node ./node_modules/gulp/bin/gulp.js serve",
+    "build": "node ./node_modules/gulp/bin/gulp.js build",
     "test": "echo \"No test specified\" && exit 0",
-    "serve": "node ./node_modules/gulp/bin/gulp.js serve"
+    "prepublish": "npm run build"
   },
   "devDependencies": {
     "@redsift/d3-rs-svg": "^0.2.1",
