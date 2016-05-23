@@ -1,6 +1,6 @@
 import checkWebPFeature from './webp';
 
-class FeatureDetection {
+let FeatureDetection = {
   webp(feature, cb) {
     checkWebPFeature(feature, cb);
   }

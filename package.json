@@ -1,6 +1,6 @@
 {
   "name": "@redsift/ui-rs-core",
-  "version": "0.1.6",
+  "version": "0.1.7",
   "description": "Common CSS styles and Javascript functionality for RedsiftUI.",
   "keywords": [
     "redsift-ui",
@@ -13,7 +13,7 @@
     "name": "Rahul Powar",
     "url": "https://medium.com/@rahulpowar"
   },
-  "main": "./dist/ui-rs-core.umd-es2015.js",
+  "main": "./dist/js/ui-rs-core.umd-es2015.min.js",
   "jsnext:main": "./src/index.js",
   "dependencies": {
     "bezier-easing": "*"
