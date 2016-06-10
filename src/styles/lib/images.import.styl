@@ -42,19 +42,19 @@ multimode-image(colour, baseimage)
  * filter      - (optional) single filter to apply to the image
  *               (e.g. 'linear-gradient')
  */
-bg-webp(basefile, fallbackext, haswebp, filter = null)
+bg-webp(basefile, fallbackext, haswebp, cdn = '', filter = null)
   if filter {
-    background-image: filter, url(basefile'.'fallbackext);
+    background-image: filter, url(cdn''basefile'.'fallbackext);
   } else {
-    background-image: url(basefile'.'fallbackext);
+    background-image: url(cdn''basefile'.'fallbackext);
   }
 
   if haswebp {
-    @supports (background-image: url(basefile'.webp')) {
+    @supports (background-image: url(cdn''basefile'.webp')) {
       if filter {
-        background-image: filter, url(basefile'.webp');
+        background-image: filter, url(cdn''basefile'.webp');
       } else {
-        background-image: url(basefile'.webp');
+        background-image: url(cdn''basefile'.webp');
       }
     }
   }
@@ -65,22 +65,22 @@ bg-webp(basefile, fallbackext, haswebp, filter = null)
  * Same as 'bg-webp', but loads the basefile with a '_2x' appendix if a retina
  * display is detected.
  */
-bg-retina-webp(basefile, fallbackext, haswebp, filter = null)
+bg-retina-webp(basefile, fallbackext, haswebp, cdn = '', filter = null)
   @media (device-pixel-ratio: 1.5),
          (    min-resolution: 192dpi),
          (    min-resolution: 1.5dppx) {
     if filter {
-      background-image: filter, url(basefile'_2x.'fallbackext);
+      background-image: filter, url(cdn''basefile'_2x.'fallbackext);
     } else {
-      background-image: url(basefile'_2x.'fallbackext);
+      background-image: url(cdn''basefile'_2x.'fallbackext);
     }
 
     if haswebp {
-      @supports (background-image: url(basefile'_2x.webp')) {
+      @supports (background-image: url(cdn''basefile'_2x.webp')) {
         if filter {
-          background-image: filter, url(basefile'_2x.webp');
+          background-image: filter, url(cdn''basefile'_2x.webp');
         } else {
-          background-image: url(basefile'_2x.webp');
+          background-image: url(cdn''basefile'_2x.webp');
         }
       }
     }
