@@ -13,11 +13,11 @@ var defaultConfig = {
 var bundleConfig = {
   mainJS: {
     name: 'ui-rs-core',
-    indexFile: './src/index.js'
+    indexFile: '../src/index.js' // FIXXME: has to be relative to './gulp-tasks'
   },
   styles: [{
     name: 'ui-rs-core',
-    indexFile: './src/index.import.styl'
+    indexFile: '../src/index.import.styl'  // FIXXME: has to be relative to './gulp-tasks'
   }]
 };
 

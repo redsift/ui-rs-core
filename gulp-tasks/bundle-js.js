@@ -28,6 +28,8 @@ module.exports = function setupTask(gulp, bundles) {
           moduleName = config.moduleNameJS,
           dest = null;
 
+          // console.log('indexFile: ' + path.resolve(__dirname, config.mainJS.indexFile));
+
         if (format === 'es6') {
           dest = path.join(config.outputFolder, 'js', config.name || '', config.mainJS.name + '.es2015.js');
           bundleES6(config.mainJS.indexFile, dest, config.externalMappings);
