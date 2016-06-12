@@ -64,9 +64,11 @@ $ui-rs-core.types.settings = {
 setColors() {
 	@import './brand.import';
 
-	$ui-rs-color.colors.white = $brandWhite;
-	$ui-rs-color.colors.black = $brandBlack;
-	$ui-rs-color.colors.red = $brandRed;
+	$ui-rs-core.colors = {
+		white: $brandWhite,
+		black: $brandBlack,
+		red: $brandRed
+	}
 
 	$ui-rs-core.colors.elements = {
 		text: $brandBlack,
