@@ -1,0 +1,81 @@
+/*
+ * Configuration
+ *
+ * Central configuration for the 'ui-rs-core' module. Configuration variables are
+ * set within the '$ui-rs-core' namespace and are avaiable in projects including
+ * this module.
+ */
+
+$ui-rs-core = {
+	types: {},
+	colors: {}
+};
+
+/*
+ * Default type setup
+ */
+
+ /* set variables in function to keep global namespace clean */
+setFonts() {
+	$fontNormal = 'Raleway', sans-serif
+	$fontHeadings = 'Electrolize', sans-serif
+	$fontCode = 'Source Code Pro', monospace
+
+  /* NOTE: It's necessary to use e.g. the $fontNormal variable here. Defining
+   * multiple fonts directly in here yields a stylus compiler error.
+   */
+	$fonts = {
+     normal: $fontNormal,
+     headings: $fontHeadings,
+     code: $fontCode
+	}
+
+	$ui-rs-core.types.fonts = $fonts;
+}
+setFonts();
+
+$ui-rs-core.types.settings = {
+  mobilePortrait: {
+    h1: { font-family: $fontHeadings, font-size:   2rem, line-height: 1.2, margin-top:   0.1em, margin-bottom:    0.1em, font-weight: 200, text-transform: uppercase },
+    h2: { font-family: $fontHeadings, font-size: 1.4rem, line-height: 1.5, margin-top: 1.25rem, margin-bottom: 0.625rem, font-weight: 200, text-transform: uppercase },
+    h3: { font-family: $fontHeadings, font-size: 1.4rem, line-height: 1.5, margin-top:       0, margin-bottom: 0.625rem, font-weight: 200, text-transform: uppercase },
+    h4: { font-family: $fontHeadings, font-size:   1rem, line-height: 1.5, margin-top:   0.7em, margin-bottom:    0.7em, font-weight: 200, text-transform: uppercase, border-bottom: 1px solid #424242, text-align: center },
+    p:  { font-family: $fontNormal,   font-size: 1.25em, line-height: 1.875rem, font-weight: 200 }
+  },
+  mobileLandscape: {
+    h1: { font-family: $fontHeadings, font-size:   3.8rem, line-height: 1.2, margin-top:   0.1em, margin-bottom:    0.1em, font-weight: 200, text-transform: uppercase },
+    h2: { font-family: $fontHeadings, font-size: 2.375rem, line-height: 1.5, margin-top: 1.25rem, margin-bottom: 0.625rem, font-weight: 200, text-transform: uppercase },
+    h3: { font-family: $fontHeadings, font-size: 1.875rem, line-height: 2.75rem, margin-top:  0, margin-bottom:  0.625rem, font-weight: 200, text-transform: uppercase },
+    h4: { font-family: $fontHeadings, font-size:     1rem, line-height: 1.5, margin-top:   0.7em, margin-bottom:    0.7em, font-weight: 200, text-transform: uppercase, border-bottom: 1px solid #424242 }
+    h5: { font-family: $fontHeadings, font-size:   0.9rem, line-height:   1, margin-top:  0.75em, margin-bottom:   0.75em, font-weight: 200, text-transform: uppercase },
+    p:  { font-family: $fontNormal,   font-size:   1.25em, line-height: 1.875rem, font-weight: 200 }
+  },
+  fontCode: {
+    padding: 0.2em,
+    radius: 3px
+  }
+}
+
+/*
+ * Default color setup
+ */
+
+ /* set variables in function to keep global namespace clean */
+setColors() {
+	@import './brand.import';
+
+	$ui-rs-color.colors.white = $brandWhite;
+	$ui-rs-color.colors.black = $brandBlack;
+	$ui-rs-color.colors.red = $brandRed;
+
+	$ui-rs-core.colors.elements = {
+		text: $brandBlack,
+		bgBody: $brandWhite,
+		link: $brandBlack,
+		hover: $brandRed,
+		visited: $brandBlack,
+		selection: $brandRed,
+		bgCode: #f7f7f7,
+		colourHero: white
+	}
+}

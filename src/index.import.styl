@@ -19,30 +19,37 @@
  */
 
 /*
+ * Configuration via object '$ui-rs-core'
+ */
+@import './styles/config.import.styl';
+
+/*
  * Mixin/functions library
  *
  * Common mixins and functions used by redsift-ui.
  */
-@import './styles/lib/cards.import'
-@import './styles/lib/gradients.import'
+@import './styles/lib/cards.import.styl'
+@import './styles/lib/gradients.import.styl'
 
 /*
  * Base configuration and common classes:
  *
  * CSS base setup and common CSS classes.
  */
-@import './styles/common/reset.import'
-@import './styles/common/fonts.import'
-@import './styles/common/patterns.import'
-@import './styles/common/breakpoints.import'
-@import './styles/common/selection.import'
-@import './styles/common/animation.import'
-@import './styles/common/base.import'
-@import './styles/common/types.import'
+@import './styles/common/reset.import.styl'
+@import './styles/common/fonts.import.styl'
+@import './styles/common/patterns.import.styl'
+@import './styles/common/breakpoints.import.styl'
+@import './styles/common/selection.import.styl'
+@import './styles/common/animation.import.styl'
+@import './styles/common/base.import.styl'
+@import './styles/common/types.import.styl'
+@import './styles/components/colour.import.styl'
 
-setup-types()
 disable-selection() // FIXXME: only disable on mobile?
 create-cards('cards', false)
+setup-types($ui-rs-core.types.fonts, $ui-rs-core.types.settings);
+setup-colors($ui-rs-core.colors.brand)
 
 /*
  * UI components:
@@ -52,13 +59,13 @@ create-cards('cards', false)
  * respective component file are used. This allows a (theme) developer to
  * customize components for their own sifts and projects.
  */
-@import './styles/components/inputs.import'
-@import './styles/components/sliders.import'
-@import './styles/components/widgets.import'
-@import './styles/components/colour.import'
-@import './styles/components/style-switcher.import'
+@import './styles/components/inputs.import.styl'
+@import './styles/components/sliders.import.styl'
+@import './styles/components/widgets.import.styl'
+
+@import './styles/components/style-switcher.import.styl'
 /* FIXXME: refactor into components! */
-@import './styles/components/d3.import'
+@import './styles/components/d3.import.styl'
 
 setup-inputs()
 setup-sliders()
