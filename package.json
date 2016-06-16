@@ -19,12 +19,12 @@
     "bezier-easing": "*"
   },
   "scripts": {
-    "serve": "node ./node_modules/gulp/bin/gulp.js serve",
-    "build": "node ./node_modules/gulp/bin/gulp.js build",
+    "build": "node ./node_modules/@redsift/redsift-bundler/bin/bundle.js -c ./bundle.config.js",
     "test": "echo \"No test specified\" && exit 0",
     "prepublish": "npm run build"
   },
   "devDependencies": {
+    "@redsift/redsift-bundler": "^0.1.6",
     "babel-polyfill": "^6.0.16",
     "babel-preset-es2015": "*",
     "babel-preset-es2015-rollup": "^1.1.1",
