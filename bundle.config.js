@@ -18,6 +18,9 @@ var bundleConfig = {
   styles: [{
     name: 'ui-rs-core',
     indexFile: './src/index.import.styl'
+  }, {
+    name: 'ui-rs-core-dark',
+    indexFile: './src/index-dark.import.styl'
   }]
 };
 

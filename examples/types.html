@@ -1,0 +1,75 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Hero</title>
+    <meta name="description" content="Red Sift Types">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" type="text/css" href="/css/ui-rs-core.min.css" title="light">
+    <link rel="alternate stylesheet" type="text/css" href="/css/ui-rs-core-dark.min.css" title="dark">
+
+    <style>
+      body {
+        margin: 1em;
+      }
+    </style>
+</head>
+
+<body>
+    <h1>Page Heading / H1</h1>
+    <p>
+      Nesting of conditions can be achieved by adding objects in the
+      <code>conditions</code> array following the same structure. i.e.
+      <code>{"conditions": [], "operator": ""}</code>
+    </p>
+    <h2>Section Heading / H2</h2>
+    <p>A Sift is an <a href="http://isomorphic.net/javascript">isomorphic Javascript application</a> that creates a micro-service on top of your email account(s). The Redsift platform creates a sandbox for your Sift to deal with the activities of processing and presenting data. Processing of the data typically happens in an environment you may notionally consider a <em>backend</em> and presentation occurs as expected in a <em>frontend</em>. Both environments are Javascript enabled, the backend running your process in what is essentially a <a href="http://node.org">NodeJS</a> host and the frontend executing in a combination of WebWorkers and normal javascript execution threads. There are some limitations around data access and restrictions on the process by design. </p>
+    <pre>
+      <code>// Workaround for https://github.com/gulpjs/gulp/issues/71
+      var origSrc = gulp.src;
+      gulp.src = function () {
+        return fixPipe(origSrc.apply(this, arguments));
+      };
+      function fixPipe(stream) {
+        var origPipe = stream.pipe;
+        stream.pipe = function (dest) {
+          arguments[0] = dest.on('error', function (error) {
+            var nextStreams = dest._nextStreams;
+            if (nextStreams) {
+              nextStreams.forEach(function (nextStream) {
+                nextStream.emit('error', error);
+              });
+            } else if (dest.listeners('error').length === 1) {
+              throw error;
+            }
+          });
+          var nextStream = fixPipe(origPipe.apply(this, arguments));
+          (this._nextStreams || (this._nextStreams = [])).push(nextStream);
+          return nextStream;
+        };
+        return stream;
+      }
+      </code>
+      </pre>
+
+      <h3>Sub Heading / H3</h3>
+      <p>"The <b>Babel fish</b> is small, yellow, leech-like, and probably the oddest thing in the universe. It feeds on brain wave energy, absorbing all unconscious frequencies and then excreting telepathically a matrix formed from the conscious frequencies and nerve signals picked up from the speech centres of the brain, the practical upshot of which is that if you stick one in your ear, you can instantly understand anything
+      said to you in any form of language: the speech you hear decodes the brain wave matrix."</p>
+      <p class="small">Copyright Example 2001</p>
+
+      <h4>Sub Sub Heading / H4</h4>
+      This is a standard text with a&nbsp;<a href="#">link</a>.<br>
+      Lorem ipsum dolor sit amet, est audiam liberavisse eu, eos congue delicata te, alia tincidunt maiestatis sit no. Te per viris comprehensam, cu nisl delenit perpetua nam, pri vitae nemore nostrum ut. Ne mei wisi patrioque, nam fuisset deterruisset ex. Quo an utamur labores percipit, no movet singulis mei.</p>
+
+    <div class="style-switcher">
+      <button onclick="RedsiftCore.StyleSwitcher.use('light');return false;" class="danger">Light Theme</button>
+      <button onclick="RedsiftCore.StyleSwitcher.use('dark');return false;" class="danger">Dark Theme</button>
+    </div>
+
+    <script src="/js/ui-rs-core.umd-es2015.js"></script>
+</body>
+
+</html>

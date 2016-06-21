@@ -18,25 +18,7 @@ setup-types($customFonts = {}, $customSettings = {}) {
     code: $fontCode
   };
 
-  // $defaultSettings = {
-  // 	mobilePortrait: {
-  // 	  h1: { font-family: $defaultFonts.headings, font-size:   3rem, line-height: 1.2, margin-top:   0.1em, margin-bottom:    0.1em, font-weight: 300, text-transform: uppercase },
-  // 	  h2: { font-family: $defaultFonts.headings, font-size: 1.4rem, line-height: 1.5, margin-top: 1.25rem, margin-bottom: 0.625rem, font-weight: 300, text-transform: uppercase },
-  // 	  h3: { font-family: $defaultFonts.headings, font-size: 1.4rem, line-height: 1.5, margin-top:       0, margin-bottom: 0.625rem, font-weight: 300, text-transform: uppercase },
-  // 	  h4: { font-family: $defaultFonts.headings, font-size:   1rem, line-height: 1.5, margin-top:   0.7em, margin-bottom:    0.7em, font-weight: 300, text-transform: uppercase, border-bottom: 1px solid #424242, text-align: center },
-  // 	},
-  // 	mobileLandscape: {
-  // 	  h1: { font-family: $defaultFonts.headings, font-size: 3.8rem, line-height: 1.2, margin-top:   0.1em, margin-bottom:    0.1em, font-weight: 300, text-transform: uppercase },
-  // 	  h2: { font-family: $defaultFonts.headings, font-size:   2rem, line-height: 1.5, margin-top: 1.25rem, margin-bottom: 0.625rem, font-weight: 300, text-transform: uppercase },
-  // 	  h3: { font-family: $defaultFonts.headings, font-size: 1.6rem, line-height: 1.5, margin-top:       0, margin-bottom:  0.625em, font-weight: 300, text-transform: uppercase },
-  // 	  h4: { font-family: $defaultFonts.headings, font-size:   1rem, line-height: 1.5, margin-top:   0.7em, margin-bottom:    0.7em, font-weight: 300, text-transform: uppercase, border-bottom: 1px solid #424242 }
-  // 	  h5: { font-family: $defaultFonts.headings, font-size: 0.9rem, line-height:   1, margin-top:  0.75em, margin-bottom:   0.75em, font-weight: 300, text-transform: uppercase },
-  // 	},
-  //   fontCode: {
-  //     padding: 0.2em,
-  //     radius: 3px
-  //   }
-  // };
+  $defaultFontSize = 1.25em;
 
   $defaultSettings = {
   	mobilePortrait: {
@@ -44,7 +26,8 @@ setup-types($customFonts = {}, $customSettings = {}) {
   	  h2: { font-family: $defaultFonts.headings, font-size: 1.4rem, line-height: 1.5, margin-top: 1.25rem, margin-bottom: 0.625rem, font-weight: 200, text-transform: uppercase },
   	  h3: { font-family: $defaultFonts.headings, font-size: 1.4rem, line-height: 1.5, margin-top:       0, margin-bottom: 0.625rem, font-weight: 200, text-transform: uppercase },
   	  h4: { font-family: $defaultFonts.headings, font-size:   1rem, line-height: 1.5, margin-top:   0.7em, margin-bottom:    0.7em, font-weight: 200, text-transform: uppercase, border-bottom: 1px solid #424242, text-align: center },
-  	  p:  { font-family: $defaultFonts.normal,   font-size: 1.25em, line-height: 1.875rem, font-weight: 200 }
+  	  p:  { font-family: $defaultFonts.normal,   font-size: $defaultFontSize, line-height: 1.875rem, font-weight: 200 }
+  	  a:  { font-family: $defaultFonts.normal,   font-size: $defaultFontSize, line-height: 1.875rem, font-weight: 200 }
   	},
   	mobileLandscape: {
   	  h1: { font-family: $defaultFonts.headings, font-size:   3.8rem, line-height: 1.2, margin-top:   0.1em, margin-bottom:    0.1em, font-weight: 200, text-transform: uppercase },
@@ -52,12 +35,14 @@ setup-types($customFonts = {}, $customSettings = {}) {
   	  h3: { font-family: $defaultFonts.headings, font-size: 1.875rem, line-height: 2.75rem, margin-top:  0, margin-bottom:  0.625rem, font-weight: 200, text-transform: uppercase },
   	  h4: { font-family: $defaultFonts.headings, font-size:     1rem, line-height: 1.5, margin-top:   0.7em, margin-bottom:    0.7em, font-weight: 200, text-transform: uppercase, border-bottom: 1px solid #424242 }
   	  h5: { font-family: $defaultFonts.headings, font-size:   0.9rem, line-height:   1, margin-top:  0.75em, margin-bottom:   0.75em, font-weight: 200, text-transform: uppercase },
-  	  p:  { font-family: $defaultFonts.normal,   font-size:   1.25em, line-height: 1.875rem, font-weight: 200 }
+  	  p:  { font-family: $defaultFonts.normal,   font-size:   $defaultFontSize, line-height: 1.875rem, font-weight: 200 }
+  	  a:  { font-family: $defaultFonts.normal,   font-size:   $defaultFontSize, line-height: 1.875rem, font-weight: 200 }
   	},
     fontCode: {
       padding: 0.2em,
       radius: 3px
     }
+    defaultFontSize: $defaultFontSize
   };
 
   $fonts = merge($defaultFonts, $customFonts);
@@ -67,8 +52,8 @@ setup-types($customFonts = {}, $customSettings = {}) {
    * Breakpoint setup:
    */
   body {
-    color: $brandBlack; /* FIXXME: set via color system! */
     font-family: $fonts.normal;
+    font-size: $settings.defaultFontSize;
     font-weight: 300;
   }
 
@@ -77,8 +62,8 @@ setup-types($customFonts = {}, $customSettings = {}) {
   }
 
   button {
-      font-family: $fonts.headings;
-      font-weight: 400;
+    font-family: $fonts.headings;
+    font-weight: 400;
   }
 
   .overlayed {
