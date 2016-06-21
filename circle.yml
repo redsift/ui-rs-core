@@ -19,7 +19,7 @@ dependencies:
 test:
   override:
     - /bin/bash -c "[ -s ${CIRCLE_ARTIFACTS}/dist/css/ui-rs-core.min.css ]"
-    - /bin/bash -c "[ -s ${CIRCLE_ARTIFACTS}/dist/css/ui-rs-core-black.min.css ]"
+    - /bin/bash -c "[ -s ${CIRCLE_ARTIFACTS}/dist/css/ui-rs-core-dark.min.css ]"
     - /bin/bash -c "[ -s ${CIRCLE_ARTIFACTS}/dist/js/ui-rs-core.umd-es2015.min.js ]"
 
 deployment:
