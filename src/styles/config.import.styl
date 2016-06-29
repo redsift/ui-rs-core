@@ -135,8 +135,22 @@ setInputConfig();
  */
 
 setButtonConfig() {
-	$ui-rs-core.buttons = {
+	$ui-rs-core.buttons.light = {
 		defaultFontSize: $ui-rs-core.types.settings.defaultButtonInputFontSize,
+		colourDefault: $ui-rs-core.themes.light.text
+		colourDisabled: #f1f1f1,
+    colourDanger: #ed1651,
+    colourButton: $brandGrey,
+    colourShadow: $brandRed,
+		paddingLeft: 1.9375em,
+		paddingRight: 1.9375em,
+		paddingTop: 0.75em,
+		paddingBottom: 0.75em
+	}
+
+	$ui-rs-core.buttons.dark = {
+		defaultFontSize: $ui-rs-core.types.settings.defaultButtonInputFontSize,
+		colourDefault: $ui-rs-core.themes.light.text
 		colourDisabled: #f1f1f1,
     colourDanger: #ed1651,
     colourButton: $brandGrey,

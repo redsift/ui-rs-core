@@ -7,6 +7,7 @@ setup-buttons($customSettings = {}) {
    */
 	$defaultSettings = {
 		defaultFontSize: 1rem,
+		colourDefault: $ui-rs-core.themes.light.text,
 		colourDisabled: #f1f1f1,
     colourDanger: #ed1651,
     colourButton: $brandGrey,
@@ -28,6 +29,7 @@ setup-buttons($customSettings = {}) {
       border: none;
       background-color: $settings.colourButton;
 			font-size: $settings.defaultFontSize;
+			color: $settings.colourDefault;
 
       &:focus {
           outline: none;
