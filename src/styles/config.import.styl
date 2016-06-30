@@ -6,12 +6,16 @@
  * this module.
  */
 
+@import './brand.import';
+
 $ui-rs-core = {
 	types: {},
 	themes: {
 		light: {},
 		dark: {}
-	}
+	},
+	inputs: {},
+	buttons: {}
 };
 
 /*
@@ -39,7 +43,8 @@ setFontConfig() {
 setFontConfig();
 
 setTypeConfig() {
-  $defaultFontSize = 1rem;
+  $defaultFontSize = 1.25rem;
+  $defaultButtonInputFontSize = 1rem;
 
   $ui-rs-core.types.settings = {
     mobilePortrait: {
@@ -63,7 +68,8 @@ setTypeConfig() {
       padding: 0.2em,
       radius: 3px
     }
-    defaultFontSize: $defaultFontSize
+    defaultFontSize: $defaultFontSize,
+    defaultButtonInputFontSize: $defaultButtonInputFontSize,
   }
 }
 setTypeConfig();
@@ -74,8 +80,6 @@ setTypeConfig();
 
  /* set variables in function to keep global namespace clean */
 setColorConfig() {
-	@import './brand.import';
-
 	/* export brand colors */
 	$ui-rs-core.colors = {
 		white: $brandWhite,
@@ -109,3 +113,52 @@ setColorConfig() {
 	}
 }
 setColorConfig();
+
+/*
+ * Default input field setup
+ */
+
+setInputConfig() {
+	$ui-rs-core.inputs = {
+		defaultFontSize: $ui-rs-core.types.settings.defaultButtonInputFontSize,
+		minHeight: 2.6875em,
+		paddingTop: 0.4375em,
+		paddingBottom: 0.4375em,
+		paddingLeft: 0.5em,
+		paddingRight: 0.5em
+	}
+}
+setInputConfig();
+
+/*
+ * Default button setup
+ */
+
+setButtonConfig() {
+	$ui-rs-core.buttons.light = {
+		defaultFontSize: $ui-rs-core.types.settings.defaultButtonInputFontSize,
+		colourDefault: $ui-rs-core.themes.light.text
+		colourDisabled: #f1f1f1,
+    colourDanger: #ed1651,
+    colourButton: $brandGrey,
+    colourShadow: $brandRed,
+		paddingLeft: 1.9375em,
+		paddingRight: 1.9375em,
+		paddingTop: 0.75em,
+		paddingBottom: 0.75em
+	}
+
+	$ui-rs-core.buttons.dark = {
+		defaultFontSize: $ui-rs-core.types.settings.defaultButtonInputFontSize,
+		colourDefault: $ui-rs-core.themes.light.text
+		colourDisabled: #f1f1f1,
+    colourDanger: #ed1651,
+    colourButton: $brandGrey,
+    colourShadow: $brandRed,
+		paddingLeft: 1.9375em,
+		paddingRight: 1.9375em,
+		paddingTop: 0.75em,
+		paddingBottom: 0.75em
+	}
+}
+setButtonConfig();

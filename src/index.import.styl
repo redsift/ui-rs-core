@@ -30,6 +30,7 @@
  */
 @import './styles/lib/cards.import.styl'
 @import './styles/lib/gradients.import.styl'
+@import './styles/lib/images.import.styl'
 
 /*
  * Base configuration and common classes:
@@ -60,6 +61,7 @@ setup-color-system($ui-rs-core.themes.light)
  * customize components for their own sifts and projects.
  */
 @import './styles/components/inputs.import.styl'
+@import './styles/components/buttons.import.styl'
 @import './styles/components/sliders.import.styl'
 @import './styles/components/widgets.import.styl'
 
@@ -67,7 +69,8 @@ setup-color-system($ui-rs-core.themes.light)
 /* FIXXME: refactor into components! */
 @import './styles/components/d3.import.styl'
 
-setup-inputs()
+setup-inputs($ui-rs-core.inputs)
+setup-buttons($ui-rs-core.buttons.light)
 setup-sliders()
 setup-widget__down-arrow()
 setup-style-switcher()

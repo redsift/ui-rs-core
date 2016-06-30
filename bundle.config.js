@@ -7,7 +7,8 @@ var defaultConfig = {
   outputFolder: paths.dest,
   moduleNameJS: 'RedsiftCore',
   mapsDest: '.',
-  externalMappings: {}
+  externalMappings: {},
+  useNormalizeCSS: true
 }
 
 var bundleConfig = {
