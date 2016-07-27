@@ -29,7 +29,7 @@ setup-types($customFonts = {}, $customSettings = {}) {
   	  p:  { font-family: $defaultFonts.normal,   font-size: $defaultFontSize, line-height: 1.875rem, font-weight: 200 }
   	  a:  { font-family: $defaultFonts.normal,   font-size: $defaultFontSize, line-height: 1.875rem, font-weight: 200 }
   	},
-  	mobileLandscape: {
+  	tablet: {
   	  h1: { font-family: $defaultFonts.headings, font-size:   3.8rem, line-height: 1.2, margin-top:   0.1em, margin-bottom:    0.1em, font-weight: 200, text-transform: uppercase },
   	  h2: { font-family: $defaultFonts.headings, font-size: 2.375rem, line-height: 1.5, margin-top: 1.25rem, margin-bottom: 0.625rem, font-weight: 200, text-transform: uppercase },
   	  h3: { font-family: $defaultFonts.headings, font-size: 1.875rem, line-height: 2.75rem, margin-top:  0, margin-bottom:  0.625rem, font-weight: 200, text-transform: uppercase },
@@ -74,7 +74,11 @@ setup-types($customFonts = {}, $customSettings = {}) {
 
   create-types($settings.mobilePortrait);
 
-  +above('mobile-landscape') {
-   create-types($settings.mobileLandscape);
+  // +above('mobile-landscape') {
+  //  create-types($settings.mobileLandscape);
+  // }
+
+  +above('tablet') {
+   create-types($settings.tablet);
   }
 }
