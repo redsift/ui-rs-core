@@ -22,7 +22,7 @@ setup-buttons($customSettings = {}) {
 	$settings = merge($defaultSettings, $customSettings);
 
   button {
-    cursor: grab;
+    cursor: pointer;
   }
 
   create-default-button($settings);
@@ -39,6 +39,12 @@ setup-buttons($customSettings = {}) {
 
       &:hover {
         // background-color: desaturate($settings.red.background.hover, 20%);
+        background-color: $settings.red.background.hover;
+        border: 1px solid $settings.red.background.hover;
+      }
+
+      &:active {
+        // background-color: desaturate($settings.red.background.hover, 20%);
         background-color: $settings.red.background.pressed;
         border: 1px solid $settings.red.background.pressed;
       }
@@ -51,6 +57,10 @@ setup-buttons($customSettings = {}) {
         background-color: $settings.red.background.hover;
         background-image: pattern--core();
         border: 1px solid $settings.red.background.hover;
+      }
+
+      &:focus {
+        outline: none; // Disable outline in chrome
       }
   }
 
@@ -76,6 +86,10 @@ setup-buttons($customSettings = {}) {
       &:disabled:hover {
           background-color: transparent;
           background-image: pattern--core(rgba(255,255,255,0.3));
+      }
+
+      &:focus {
+        outline: none; // Disable outline in chrome
       }
   }
 }
