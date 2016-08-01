@@ -26,11 +26,20 @@ gulp.task('browser-sync', function() {
     });
 });
 
-gulp.task('serve', [ 'build', 'browser-sync' ], function() {
+gulp.task('watch', function() {
+  console.log('asdasdf');
     gulp.watch(['./src/**/*.js', './src/**/*.styl'], ['build']);
     gulp.watch('./dist/**/*.js').on('change', () => browserSync.reload('*.js'));
     gulp.watch('./dist/**/*.css').on('change', () => browserSync.reload('*.css'));
     gulp.watch('./examples/*.html').on('change', () => browserSync.reload('*.html'));
 });
 
-gulp.task('default', [ 'build', 'serve' ]);
+gulp.task('serve', [ 'build', 'browser-sync' ], function() {
+  console.log('asdasdf');
+    gulp.watch(['./src/**/*.js', './src/**/*.styl'], ['build']);
+    gulp.watch('./dist/**/*.js').on('change', () => browserSync.reload('*.js'));
+    gulp.watch('./dist/**/*.css').on('change', () => browserSync.reload('*.css'));
+    gulp.watch('./examples/*.html').on('change', () => browserSync.reload('*.html'));
+});
+
+gulp.task('default', [ 'build', 'serve', 'watch' ]);

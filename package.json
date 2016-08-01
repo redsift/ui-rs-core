@@ -19,6 +19,7 @@
     "bezier-easing": "*"
   },
   "scripts": {
+    "start": "gulp",
     "build": "node ./node_modules/@redsift/redsift-bundler/bin/bundle.js -c ./bundle.config.js",
     "pretest": "npm outdated",
     "test": "echo \"No test specified\" && exit 0",
