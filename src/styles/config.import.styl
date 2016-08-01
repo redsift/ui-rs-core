@@ -122,9 +122,9 @@ setColorConfig();
 setInputConfig() {
 	$ui-rs-core.inputs = {
 		defaultFontSize: $ui-rs-core.types.settings.defaultButtonInputFontSize,
-		minHeight: 2.6875em,
-		paddingTop: 0.4375em,
-		paddingBottom: 0.4375em,
+		minHeight: 2.75em,
+		paddingTop: 0.5em,
+		paddingBottom: 0.5em,
 		paddingLeft: 0.5em,
 		paddingRight: 0.5em
 	}
@@ -292,23 +292,25 @@ setButtonConfig();
  * Default slider setup
  */
 
-// setSliderConfig() {
-// 	$ui-rs-core.sliders.light = {
-//     defaultThumbSize: 1em,
-//     red: {
-//       highlight: #E11010,
-//       background: #CACACA,
-//       thumbColor: #fff
-//     }
-// 	}
-//
-// 	$ui-rs-core.sliders.dark = {
-//     defaultThumbSize: 1em,
-//     red: {
-//       highlight: #E11010,
-//       background: #fff,
-//       thumbColor: #fff
-//     }
-// 	}
-// }
-// setSliderConfig();
+setSliderConfig() {
+	$ui-rs-core.sliders.light = {
+    width: 15em,
+    height: 1em,
+    radius: 0.25em,
+    highlight: #E11010,
+    background: #CACACA,
+    thumbColour: $brandWhite,
+    thumbSize: 1em
+  }
+
+	$ui-rs-core.sliders.dark = {
+    width: 15em,
+    height: 1em,
+    radius: 0.25em,
+    highlight: #E11010,
+    background: #CACACA,
+    thumbColour: $brandWhite,
+    thumbSize: 1em
+  }
+}
+setSliderConfig();
