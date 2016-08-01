@@ -21,73 +21,32 @@ setup-buttons($customSettings = {}) {
 
 	$settings = merge($defaultSettings, $customSettings);
 
-  button {
-      padding-top: $settings.paddingTop;
-      padding-bottom: $settings.paddingBottom;
-			padding-left: $settings.paddingLeft;
-			padding-right: $settings.paddingRight;
-
-      color: $settings.red.color.default;
-      background: $settings.red.background.default;
-
-      border: 1px solid $settings.red.color.default;
-
-      font-family: $settings.fontFamily;
-			font-size: $settings.defaultFontSize;
-
-      // TODO: do we have a focused style?
-      &:focus {
-        outline: none;
-        // color: $settings.red.color.hover;
-        // background: $settings.red.background.hover;
-        // border: 1px solid $settings.red.color.hover;
-      }
-
-      &:hover {
-        color: $settings.red.color.hover;
-        background: $settings.red.background.hover;
-        border: 1px solid $settings.red.background.hover;
-      }
-
-      &:disabled {
-        color: $settings.red.color.disabled;
-        background: $settings.red.background.disabled;
-        border: 1px solid $settings.red.background.disabled;
-      }
-  }
-
-  .rs-btn--selected {
-    color: $settings.red.color.pressed;
-    background: $settings.red.background.pressed;
-    border: 1px solid $settings.red.background.pressed;
-
-    &:hover {
-      color: $settings.red.color.pressed;
-      background: $settings.red.background.pressed;
-      border: 1px solid $settings.red.background.pressed;
-    }
-  }
-
+  create-default-button($settings);
   create-bem-button('red', $settings);
   create-bem-button('green', $settings);
   create-bem-button('blue', $settings);
 
+  // TODO: remove these legacy buttons
   .hero button.danger,
   button.danger {
       color: white;
-      background-color: $settings.colourDanger;
+      background-color: $settings.red.background.hover;
+      border: 1px solid $settings.red.background.hover;
 
       &:hover {
-          background-color: desaturate($settings.colourDanger, 20%);
+        // background-color: desaturate($settings.red.background.hover, 20%);
+        background-color: $settings.red.background.pressed;
+        border: 1px solid $settings.red.background.pressed;
       }
 
       &:disabled {
-          background-image: pattern--core();
+        background-image: pattern--core();
       }
 
       &:disabled:hover {
-          background-color: $settings.colourDanger;
-          background-image: pattern--core();
+        background-color: $settings.red.background.hover;
+        background-image: pattern--core();
+        border: 1px solid $settings.red.background.hover;
       }
   }
 
@@ -103,7 +62,7 @@ setup-buttons($customSettings = {}) {
       }
 
       &:hover {
-          background-color: rgba(255,255,255,0.2);
+          background-color: rgba(255,255,255,0);
       }
 
       &:disabled {

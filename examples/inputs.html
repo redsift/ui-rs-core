@@ -5,6 +5,7 @@
   <style>
     .content__container {
       padding: 1em;
+      margin-bottom: 3em;
     }
 
     .content__container > div {
@@ -52,6 +53,36 @@
 
         <hr style="margin: 4em 0;">
 
+        <div style="margin: 2em;">
+            <h3 style="margin: 1em 0;">Button theme: default, small</h3>
+            <button class="rs-btn--small">Option 1</button>
+            <button class="rs-btn--small">Option 2</button>
+            <button class="rs-btn--small rs-btn--selected">Option 3</button>
+        </div>
+
+        <div style="margin: 2em;">
+            <h3 style="margin: 1em 0;">Button theme: red, small</h3>
+            <button class="rs-btn--red rs-btn--small rs-btn--selected">Option 1</button>
+            <button class="rs-btn--red rs-btn--small">Option 2</button>
+            <button class="rs-btn--red rs-btn--small">Option 3</button>
+        </div>
+
+        <div style="margin: 2em;">
+            <h3 style="margin: 1em 0;">Button theme: blue, small</h3>
+            <button class="rs-btn--blue rs-btn--small">Option 1</button>
+            <button class="rs-btn--blue rs-btn--small rs-btn--selected">Option 2</button>
+            <button class="rs-btn--blue rs-btn--small">Option 3</button>
+        </div>
+
+        <div style="margin: 2em;">
+            <h3 style="margin: 1em 0;">Button theme: green, small</h3>
+            <button class="rs-btn--green rs-btn--small">Option 1</button>
+            <button class="rs-btn--green rs-btn--small">Option 2</button>
+            <button class="rs-btn--green rs-btn--small rs-btn--selected">Option 3</button>
+        </div>
+
+        <hr style="margin: 4em 0;">
+
         <div>
           <h3>Slider</h3>
           <input type='range' value='42' min='5' max = '50'/>
@@ -72,14 +103,14 @@
           <input type='range' class='progress animated intermediate change' value='32' disabled/>
         </div>
 
+        <hr style="margin: 4em 0;">
+
         <div>
+          <h3>Input Fields</h3>
             <form accept-charset="UTF-8" action="/claim" method="get">
               <input type="text" name="q" placeholder="Placeholder" autocapitalize="off">
               <button>Claim</button>
             </form>
-            <div class="informational">
-              <p class="small">Some information <a href="https://signin.redsift.io">Sift here</a>.</p>
-            </div>
         </div>
 
         <div>
@@ -87,10 +118,15 @@
             <button disabled>Disabled</button>
         </div>
 
+        <hr style="margin: 4em 0;">
+
         <div>
+            <h3>Legacy Buttons</h3>
             <button class="danger">Danger</button>
             <button class="danger" disabled>Disabled</button>
         </div>
+
+        <hr style="margin: 4em 0;">
       </div>
     </div>
 

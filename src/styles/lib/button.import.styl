@@ -3,16 +3,77 @@
  */
 
 /*
+ * create-default-button()
+ *
+ * Styles a default button.
+ */
+create-default-button($settings) {
+  button {
+      padding-top: $settings.style.default.paddingTop;
+      padding-bottom: $settings.style.default.paddingBottom;
+      padding-left: $settings.style.default.paddingLeft;
+      padding-right: $settings.style.default.paddingRight;
+
+      color: $settings.red.color.default;
+      background: $settings.red.background.default;
+
+      border: 1px solid $settings.red.color.default;
+
+      font-family: $settings.fontFamily;
+      font-size: $settings.defaultFontSize;
+
+      // TODO: do we have a focused style?
+      &:focus {
+        outline: none;
+        // color: $settings.red.color.hover;
+        // background: $settings.red.background.hover;
+        // border: 1px solid $settings.red.color.hover;
+      }
+
+      &:hover {
+        color: $settings.red.color.hover;
+        background: $settings.red.background.hover;
+        border: 1px solid $settings.red.background.hover;
+      }
+
+      &:disabled {
+        color: $settings.red.color.disabled;
+        background: $settings.red.background.disabled;
+        border: 1px solid $settings.red.background.disabled;
+      }
+  }
+
+  button.rs-btn--small {
+    padding-top: $settings.style.small.paddingTop;
+    padding-bottom: $settings.style.small.paddingBottom;
+    padding-left: $settings.style.small.paddingLeft;
+    padding-right: $settings.style.small.paddingRight;
+  }
+
+  button.rs-btn--selected {
+    color: $settings.red.color.pressed;
+    background: $settings.red.background.pressed;
+    border: 1px solid $settings.red.background.pressed;
+
+    &:hover {
+      color: $settings.red.color.pressed;
+      background: $settings.red.background.pressed;
+      border: 1px solid $settings.red.background.pressed;
+    }
+  }
+}
+
+/*
  * create-bem-button()
  *
  * Creates a button with BEM style classes.
  */
  create-bem-button($name, $settings) {
     .rs-btn--{$name} {
-      padding-top: $settings.paddingTop;
-      padding-bottom: $settings.paddingBottom;
-      padding-left: $settings.paddingLeft;
-      padding-right: $settings.paddingRight;
+      padding-top: $settings.style.default.paddingTop;
+      padding-bottom: $settings.style.default.paddingBottom;
+      padding-left: $settings.style.default.paddingLeft;
+      padding-right: $settings.style.default.paddingRight;
 
       color: $settings[$name].color.default;
       background: $settings[$name].background.default;
@@ -53,5 +114,12 @@
         background: $settings[$name].background.pressed;
         border: 1px solid $settings[$name].background.pressed;
       }
+    }
+
+    .rs-btn--small {
+      padding-top: $settings.style.small.paddingTop;
+      padding-bottom: $settings.style.small.paddingBottom;
+      padding-left: $settings.style.small.paddingLeft;
+      padding-right: $settings.style.small.paddingRight;
     }
  }

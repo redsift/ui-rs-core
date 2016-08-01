@@ -137,12 +137,22 @@ setInputConfig();
 
 setButtonConfig() {
 	$ui-rs-core.buttons.light = {
-		paddingLeft: 1.9375em,
-		paddingRight: 1.9375em,
-		paddingTop: 0.75em,
-		paddingBottom: 0.75em,
     fontFamily: $ui-rs-core.types.fonts.normal,
 		defaultFontSize: $ui-rs-core.types.settings.defaultButtonInputFontSize,
+    style: {
+      default: {
+        paddingLeft: 1.9375em,
+        paddingRight: 1.9375em,
+        paddingTop: 0.75em,
+        paddingBottom: 0.75em,
+      },
+      small: {
+        paddingLeft: 0.3em,
+        paddingRight: 0.3em,
+        paddingTop: 0.3em,
+        paddingBottom: 0.3em
+      }
+    },
     red: {
       color: {
         default: #E11010,
@@ -188,12 +198,22 @@ setButtonConfig() {
 	}
 
 	$ui-rs-core.buttons.dark = {
-		paddingLeft: 1.9375em,
-		paddingRight: 1.9375em,
-		paddingTop: 0.75em,
-		paddingBottom: 0.75em,
     fontFamily: $ui-rs-core.types.fonts.normal,
 		defaultFontSize: $ui-rs-core.types.settings.defaultButtonInputFontSize,
+    style: {
+      default: {
+        paddingLeft: 1.9375em,
+        paddingRight: 1.9375em,
+        paddingTop: 0.75em,
+        paddingBottom: 0.75em,
+      },
+      small: {
+        paddingLeft: 0.2em,
+        paddingRight: 0.2em,
+        paddingTop: 0.2em,
+        paddingBottom: 0.2em
+      }
+    },
     red: {
       color: {
         default: #E11010,
