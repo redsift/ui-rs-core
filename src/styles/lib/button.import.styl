@@ -14,10 +14,10 @@ create-default-button($settings) {
       padding-left: $settings.style.default.paddingLeft;
       padding-right: $settings.style.default.paddingRight;
 
-      color: $settings.red.color.default;
-      background: $settings.red.background.default;
+      color: $settings.default.color.default;
+      background: $settings.default.background.default;
 
-      border: 1px solid $settings.red.color.default;
+      border: 1px solid $settings.default.color.default;
 
       font-family: $settings.fontFamily;
       font-size: $settings.defaultFontSize;
@@ -25,21 +25,21 @@ create-default-button($settings) {
       // TODO: do we have a focused style?
       &:focus {
         outline: none;
-        // color: $settings.red.color.hover;
-        // background: $settings.red.background.hover;
-        // border: 1px solid $settings.red.color.hover;
+        // color: $settings.default.color.hover;
+        // background: $settings.default.background.hover;
+        // border: 1px solid $settings.default.color.hover;
       }
 
       &:hover {
-        color: $settings.red.color.hover;
-        background: $settings.red.background.hover;
-        border: 1px solid $settings.red.background.hover;
+        color: $settings.default.color.hover;
+        background: $settings.default.background.hover;
+        border: 1px solid $settings.default.background.hover;
       }
 
       &:disabled {
-        color: $settings.red.color.disabled;
-        background: $settings.red.background.disabled;
-        border: 1px solid $settings.red.background.disabled;
+        color: $settings.default.color.disabled;
+        background: $settings.default.background.disabled;
+        border: 1px solid $settings.default.background.disabled;
       }
   }
 
@@ -51,14 +51,14 @@ create-default-button($settings) {
   }
 
   button.rs-btn--selected {
-    color: $settings.red.color.pressed;
-    background: $settings.red.background.pressed;
-    border: 1px solid $settings.red.background.pressed;
+    color: $settings.default.color.pressed;
+    background: $settings.default.background.pressed;
+    border: 1px solid $settings.default.background.pressed;
 
     &:hover {
-      color: $settings.red.color.pressed;
-      background: $settings.red.background.pressed;
-      border: 1px solid $settings.red.background.pressed;
+      color: $settings.default.color.pressed;
+      background: $settings.default.background.pressed;
+      border: 1px solid $settings.default.background.pressed;
     }
   }
 }
