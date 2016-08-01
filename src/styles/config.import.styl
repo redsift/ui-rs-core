@@ -1,4 +1,4 @@
-/*
+  /*
  * Configuration
  *
  * Central configuration for the 'ui-rs-core' module. Configuration variables are
@@ -15,7 +15,8 @@ $ui-rs-core = {
 		dark: {}
 	},
 	inputs: {},
-	buttons: {}
+	buttons: {},
+  sliders: {}
 };
 
 /*
@@ -136,29 +137,130 @@ setInputConfig();
 
 setButtonConfig() {
 	$ui-rs-core.buttons.light = {
-		defaultFontSize: $ui-rs-core.types.settings.defaultButtonInputFontSize,
-		colourDefault: $ui-rs-core.themes.light.text
-		colourDisabled: #f1f1f1,
-    colourDanger: #ed1651,
-    colourButton: $brandGrey,
-    colourShadow: $brandRed,
 		paddingLeft: 1.9375em,
 		paddingRight: 1.9375em,
 		paddingTop: 0.75em,
-		paddingBottom: 0.75em
+		paddingBottom: 0.75em,
+    fontFamily: $ui-rs-core.types.fonts.normal,
+		defaultFontSize: $ui-rs-core.types.settings.defaultButtonInputFontSize,
+    red: {
+      color: {
+        default: #E11010,
+        hover: #fff,
+        pressed: #fff,
+        disabled: #7F7F7F
+      },
+      background: {
+        default: #fff,
+        hover: #E11010,
+        pressed: #6A0000,
+        disabled: #CACACA
+      }
+    },
+    green: {
+      color: {
+        default: green,
+        hover: #fff,
+        pressed: #fff,
+        disabled: #7F7F7F
+      },
+      background: {
+        default: #fff,
+        hover: #0AB93A,
+        pressed: #087927,
+        disabled: #CACACA
+      }
+    },
+    blue: {
+      color: {
+        default: #1671F4,
+        hover: #fff,
+        pressed: #fff,
+        disabled: #7F7F7F
+      },
+      background: {
+        default: #fff,
+        hover: #1671f4,
+        pressed: #0B49A2,
+        disabled: #CACACA
+      }
+    }
 	}
 
 	$ui-rs-core.buttons.dark = {
-		defaultFontSize: $ui-rs-core.types.settings.defaultButtonInputFontSize,
-		colourDefault: $ui-rs-core.themes.light.text
-		colourDisabled: #f1f1f1,
-    colourDanger: #ed1651,
-    colourButton: $brandGrey,
-    colourShadow: $brandRed,
 		paddingLeft: 1.9375em,
 		paddingRight: 1.9375em,
 		paddingTop: 0.75em,
-		paddingBottom: 0.75em
+		paddingBottom: 0.75em,
+    fontFamily: $ui-rs-core.types.fonts.normal,
+		defaultFontSize: $ui-rs-core.types.settings.defaultButtonInputFontSize,
+    red: {
+      color: {
+        default: #E11010,
+        hover: #fff,
+        pressed: #fff,
+        disabled: #7F7F7F
+      },
+      background: {
+        default: #fff,
+        hover: #E11010,
+        pressed: #6A0000,
+        disabled: #CACACA
+      }
+    },
+    green: {
+      color: {
+        default: green,
+        hover: #fff,
+        pressed: #fff,
+        disabled: #7F7F7F
+      },
+      background: {
+        default: #fff,
+        hover: #0AB93A,
+        pressed: #087927,
+        disabled: #CACACA
+      }
+    },
+    blue: {
+      color: {
+        default: #1671F4,
+        hover: #fff,
+        pressed: #fff,
+        disabled: #7F7F7F
+      },
+      background: {
+        default: #fff,
+        hover: #1671f4,
+        pressed: #0B49A2,
+        disabled: #CACACA
+      }
+    }
 	}
 }
 setButtonConfig();
+
+/*
+ * Default slider setup
+ */
+
+// setSliderConfig() {
+// 	$ui-rs-core.sliders.light = {
+//     defaultThumbSize: 1em,
+//     red: {
+//       highlight: #E11010,
+//       background: #CACACA,
+//       thumbColor: #fff
+//     }
+// 	}
+//
+// 	$ui-rs-core.sliders.dark = {
+//     defaultThumbSize: 1em,
+//     red: {
+//       highlight: #E11010,
+//       background: #fff,
+//       thumbColor: #fff
+//     }
+// 	}
+// }
+// setSliderConfig();

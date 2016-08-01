@@ -1,0 +1,57 @@
+/*
+ * mixins for setting up buttons
+ */
+
+/*
+ * create-bem-button()
+ *
+ * Creates a button with BEM style classes.
+ */
+ create-bem-button($name, $settings) {
+    .rs-btn--{$name} {
+      padding-top: $settings.paddingTop;
+      padding-bottom: $settings.paddingBottom;
+      padding-left: $settings.paddingLeft;
+      padding-right: $settings.paddingRight;
+
+      color: $settings[$name].color.default;
+      background: $settings[$name].background.default;
+
+      border: 1px solid $settings[$name].color.default;
+
+      font-family: $settings.fontFamily;
+			font-size: $settings.defaultFontSize;
+
+      // TODO: do we have a focused style?
+      &:focus {
+        outline: none;
+        // color: $settings[$name].color.hover;
+        // background: $settings[$name].background.hover;
+        // border: 1px solid $settings[$name].color.hover;
+      }
+
+      &:hover {
+        color: $settings[$name].color.hover;
+        background: $settings[$name].background.hover;
+        border: 1px solid $settings[$name].background.hover;
+      }
+
+      &:disabled {
+        color: $settings[$name].color.disabled;
+        background: $settings[$name].background.disabled;
+        border: 1px solid $settings[$name].background.disabled;
+      }
+    }
+
+    .rs-btn--{$name}.rs-btn--selected {
+      color: $settings[$name].color.pressed;
+      background: $settings[$name].background.pressed;
+      border: 1px solid $settings[$name].background.pressed;
+
+      &:hover {
+        color: $settings[$name].color.pressed;
+        background: $settings[$name].background.pressed;
+        border: 1px solid $settings[$name].background.pressed;
+      }
+    }
+ }

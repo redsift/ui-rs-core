@@ -1,5 +1,6 @@
-@import '../brand.import'
-@import '../lib/gradients.import'
+@import '../brand.import';
+@import '../lib/button.import';
+@import '../lib/gradients.import';
 
 setup-buttons($customSettings = {}) {
 	/*
@@ -21,34 +22,55 @@ setup-buttons($customSettings = {}) {
 	$settings = merge($defaultSettings, $customSettings);
 
   button {
-      border-radius: 3px;
       padding-top: $settings.paddingTop;
       padding-bottom: $settings.paddingBottom;
 			padding-left: $settings.paddingLeft;
 			padding-right: $settings.paddingRight;
-      border: none;
-      background-color: $settings.colourButton;
-			font-size: $settings.defaultFontSize;
-			color: $settings.colourDefault;
 
+      color: $settings.red.color.default;
+      background: $settings.red.background.default;
+
+      border: 1px solid $settings.red.color.default;
+
+      font-family: $settings.fontFamily;
+			font-size: $settings.defaultFontSize;
+
+      // TODO: do we have a focused style?
       &:focus {
-          outline: none;
-          box-shadow: 0 0 0 1px $settings.colourShadow;
+        outline: none;
+        // color: $settings.red.color.hover;
+        // background: $settings.red.background.hover;
+        // border: 1px solid $settings.red.color.hover;
       }
 
       &:hover {
-          background-color: lighten($settings.colourButton, 30%);
+        color: $settings.red.color.hover;
+        background: $settings.red.background.hover;
+        border: 1px solid $settings.red.background.hover;
       }
 
       &:disabled {
-          background-image: pattern--core($settings.colourDisabled);
-      }
-
-      &:disabled:hover {
-          background-color: $brandGrey;
-          background-image: pattern--core($settings.colourDisabled);
+        color: $settings.red.color.disabled;
+        background: $settings.red.background.disabled;
+        border: 1px solid $settings.red.background.disabled;
       }
   }
+
+  .rs-btn--selected {
+    color: $settings.red.color.pressed;
+    background: $settings.red.background.pressed;
+    border: 1px solid $settings.red.background.pressed;
+
+    &:hover {
+      color: $settings.red.color.pressed;
+      background: $settings.red.background.pressed;
+      border: 1px solid $settings.red.background.pressed;
+    }
+  }
+
+  create-bem-button('red', $settings);
+  create-bem-button('green', $settings);
+  create-bem-button('blue', $settings);
 
   .hero button.danger,
   button.danger {
