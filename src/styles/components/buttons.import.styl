@@ -21,6 +21,10 @@ setup-buttons($customSettings = {}) {
 
 	$settings = merge($defaultSettings, $customSettings);
 
+  button {
+    cursor: grab;
+  }
+
   create-default-button($settings);
   create-bem-button('red', $settings);
   create-bem-button('green', $settings);
