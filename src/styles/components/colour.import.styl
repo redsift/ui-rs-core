@@ -10,9 +10,11 @@ setup-color-system($customSettings = {}) {
 		bgBody: $brandWhite,
 		link: $brandBlack,
 		hover: $brandRed,
+		pressed: #6A0000,
 		visited: $brandBlack,
 		selection: $brandRed,
 		bgCode: #f7f7f7,
+		colorCode: $brandBlack,
 		colourHero: white
 	}
 
@@ -36,15 +38,18 @@ setup-color-system($customSettings = {}) {
   	color: $settings.link;
 	}
 
-	a:active,
+	a:visited {
+		color: $settings.visited;
+	}
+
 	a:hover,
 	a:visited:hover {
 		color: $settings.hover;
 	}
 
-	a:visited {
-		color: $settings.visited;
-	}
+	a:active {
+		color: $settings.pressed;
+  }
 
 	a:focus {
 		outline: none;
@@ -52,10 +57,12 @@ setup-color-system($customSettings = {}) {
 	}
 
 	p code {
+    color: $settings.colorCode;
 		background-color: $settings.bgCode;
 	}
 
 	pre {
+    color: $settings.colorCode;
 		background-color: $settings.bgCode;
 	}
 
