@@ -1,6 +1,6 @@
 {
   "name": "@redsift/ui-rs-core",
-  "version": "0.2.1",
+  "version": "0.3.0",
   "description": "Common CSS styles and Javascript functionality for RedsiftUI.",
   "keywords": [
     "redsift-ui",
@@ -16,7 +16,8 @@
   "main": "./dist/js/ui-rs-core.umd-es2015.min.js",
   "jsnext:main": "./src/index.js",
   "dependencies": {
-    "bezier-easing": "*"
+    "bezier-easing": "*",
+    "normalize.css": "^4.2.0"
   },
   "scripts": {
     "start": "gulp",
