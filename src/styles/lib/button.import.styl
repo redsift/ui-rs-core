@@ -16,7 +16,7 @@ create-default-button($settings) {
 
       color: $settings.default.color.default;
       background: $settings.default.background.default;
-      border: 1px solid $settings.default.color.default;
+      border: 1px solid $settings.default.color.border;
 
       font-family: $settings.fontFamily;
       font-size: $settings.defaultFontSize;
@@ -87,7 +87,7 @@ create-default-button($settings) {
       color: $settings[$name].color.default;
       background: $settings[$name].background.default;
 
-      border: 1px solid $settings[$name].color.default;
+      border: 1px solid $settings[$name].color.border;
 
       font-family: $settings.fontFamily;
 			font-size: $settings.defaultFontSize;
