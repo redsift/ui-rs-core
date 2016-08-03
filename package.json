@@ -1,6 +1,6 @@
 {
   "name": "@redsift/ui-rs-core",
-  "version": "0.3.2",
+  "version": "0.3.3",
   "description": "Common CSS styles and Javascript functionality for RedsiftUI.",
   "keywords": [
     "redsift-ui",
