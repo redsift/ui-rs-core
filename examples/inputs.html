@@ -84,6 +84,27 @@
         <hr style="margin: 4em 0;">
 
         <div>
+          <h3>Buttons within &lt;p&gt; blocks</h3>
+          <p>We assume that content within &lt;p&gt; blocks will be text'ish. Therefore we style base component (like
+             &lt;buttons&gt;) with a <strong>default margin</strong> so that they fit within the text flow.
+
+             <button>Option 1</button>
+             <button class="rs-btn--red">Option 2</button>
+             <button class="rs-btn--green">Option 3</button>
+             <button class="rs-btn--blue">Option 4</button>
+
+             The same works with small buttons, of course:
+
+             <button class="rs-btn--small">Option 1</button>
+             <button class="rs-btn--red rs-btn--small">Option 2</button>
+             <button class="rs-btn--green rs-btn--small">Option 3</button>
+             <button class="rs-btn--blue rs-btn--small">Option 4</button>
+          </p>
+        </div>
+
+        <hr style="margin: 4em 0;">
+
+        <div>
           <h3>Slider</h3>
           <input type='range' value='42' min='5' max = '50'/>
         </div>

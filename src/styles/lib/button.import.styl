@@ -70,6 +70,13 @@ create-default-button($settings) {
       border: 1px solid $settings.default.background.hover;
     }
   }
+
+  /* Styling the base button will is implicitly applying the styles to the 'bem' buttons */
+  adjust-p-block-styling($ui-rs-core.types.settings.mobilePortrait, $settings.style);
+
+  +above('tablet') {
+    adjust-p-block-styling($ui-rs-core.types.settings.tablet, $settings.style);
+  }
 }
 
 /*
@@ -142,3 +149,25 @@ create-default-button($settings) {
       padding-right: $settings.style.small.paddingRight;
     }
  }
+
+/*
+ * adjust-p-block-styling()
+ *
+ * We assume that content within <p> blocks will be text'ish. Therefore we style base component like
+ * <buttons> so that they look good in a text flow.
+ * The margin is calculated based on the line-height of the <p>: p.line-height - p.font-size - button.padding
+ */
+adjust-p-block-styling($typeSettings, $styleSettings) {
+  $pLineHeight = $typeSettings.p['line-height'];
+  $pFontSize = $typeSettings.p['font-size'];
+
+  p button {
+    // padding: $styleSettings.default.paddingTop $styleSettings.default.paddingRight $styleSettings.default.paddingBottom $styleSettings.default.paddingLeft;
+    margin: ($pLineHeight - $pFontSize);
+    line-height: 1;
+  }
+
+  p button.rs-btn--small  {
+    margin: ($pLineHeight - $pFontSize - $styleSettings.small.paddingTop/2);
+  }
+}
