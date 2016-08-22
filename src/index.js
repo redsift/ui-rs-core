@@ -9,3 +9,4 @@ export {
 	StyleSwitcher
 } from './js/widgets/index';
 export { Xkcd } from './js/xkcd/index';
+export { default as cssDisableSelection } from './js/selection';
