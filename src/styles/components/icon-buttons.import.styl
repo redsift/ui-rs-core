@@ -4,16 +4,12 @@
  * Creates a button with an icon (e.g. for federated login buttons).
  */
  setup-default-icon-button($style, $colors) {
-    .rs-icon-button {
+    .rs-icon-btn {
       display: flex;
       flex-direction: row;
       flex: 0 auto;
 
       min-width: $style.default.minWidth;
-      margin-top: $style.default.marginTop;
-      margin-bottom: $style.default.marginBottom;
-      margin-left: $style.default.marginLeft;
-      margin-right: $style.default.marginRight;
 
       color: $colors.color.default;
       border: 1px solid $colors.color.default;
@@ -48,7 +44,7 @@
       }
     }
 
-    .rs-icon-button__icon {
+    .rs-icon-btn__icon {
       display: block;
       width: 1.875em;
       height: 1.875em;
@@ -56,7 +52,7 @@
       background-color: #fff;
     }
 
-    .rs-icon-button__label {
+    .rs-icon-btn__label {
       display: flex;
       padding-left: 1em;
       justify-content: flex-start;
@@ -72,7 +68,7 @@
       }
     }
 
-    .rs-icon-button__icon__wrapper {
+    .rs-icon-btn__icon__wrapper {
       width: 2.5em;
       height: 2.5em;
 
@@ -85,15 +81,15 @@
       background: white;
     }
 
-    .rs-icon-button__icon__wrapper__padding {
+    .rs-icon-btn__icon__wrapper__padding {
       /* only necessary for flexbox centering */
     }
 
-    .rs-icon-btn--small {
-      min-width: $style.small.minWidth;
-      margin-top: $style.small.marginTop;
-      margin-bottom: $style.small.marginBottom;
-      margin-left: $style.small.marginLeft;
-      margin-right: $style.small.marginRight;
-    }
+    // .rs-icon-btn--small {
+    //   min-width: $style.small.minWidth;
+    //   margin-top: $style.small.marginTop;
+    //   margin-bottom: $style.small.marginBottom;
+    //   margin-left: $style.small.marginLeft;
+    //   margin-right: $style.small.marginRight;
+    // }
  }
