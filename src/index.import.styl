@@ -45,6 +45,7 @@
 @import './styles/common/base.import.styl'
 @import './styles/common/types.import.styl'
 @import './styles/components/colour.import.styl'
+@import './styles/common/icons.import.styl'
 
 setup-font-faces()
 create-cards('cards', false)
@@ -61,8 +62,10 @@ setup-color-system($ui-rs-core.themes.light)
  */
 @import './styles/components/inputs.import.styl'
 @import './styles/components/buttons.import.styl'
+@import './styles/components/icon-buttons.import.styl'
 @import './styles/components/sliders.import.styl'
 @import './styles/components/widgets.import.styl'
+
 
 @import './styles/components/style-switcher.import.styl'
 /* FIXXME: refactor into components! */
@@ -70,6 +73,7 @@ setup-color-system($ui-rs-core.themes.light)
 
 setup-inputs($ui-rs-core.inputs)
 setup-buttons($ui-rs-core.buttons.light)
+setup-default-icon-button($ui-rs-core.iconButtons.light.style, $ui-rs-core.buttons.light.black);
 setup-sliders($ui-rs-core.sliders.light)
 
 setup-widget__down-arrow()

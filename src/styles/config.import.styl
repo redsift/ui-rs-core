@@ -16,6 +16,7 @@ $ui-rs-core = {
 	},
 	inputs: {},
 	buttons: {},
+	iconButtons: {},
   sliders: {}
 };
 
@@ -141,9 +142,9 @@ setInputConfig();
  */
 
 setButtonConfig() {
-	$ui-rs-core.buttons.light = {
+  $ui-rs-core.buttons.light = {
     fontFamily: $ui-rs-core.types.fonts.normal,
-		defaultFontSize: $ui-rs-core.types.settings.defaultButtonInputFontSize,
+    defaultFontSize: $ui-rs-core.types.settings.defaultButtonInputFontSize,
     style: {
       default: {
         paddingLeft: 1.9375em,
@@ -330,6 +331,55 @@ setButtonConfig() {
 	}
 }
 setButtonConfig();
+
+setIconButtonConfig() {
+  $ui-rs-core.iconButtons.light = {
+    style: {
+      default: {
+        fontFamily: $ui-rs-core.types.fonts.normal,
+        defaultFontSize: $ui-rs-core.types.settings.defaultButtonInputFontSize,
+        height: 50px,
+        minWidth: 180px,
+        marginRight: 1em,
+        marginBottom: 1em,
+        marginLeft: 1em
+      },
+      small: {
+        fontFamily: $ui-rs-core.types.fonts.normal,
+        defaultFontSize: $ui-rs-core.types.settings.defaultButtonInputFontSize,
+        height: 50px,
+        minWidth: 180px,
+        marginRight: 1em,
+        marginBottom: 1em,
+        marginLeft: 1em
+      }
+    }
+  }
+
+  $ui-rs-core.iconButtons.dark = {
+    style: {
+      default: {
+        fontFamily: $ui-rs-core.types.fonts.normal,
+        defaultFontSize: $ui-rs-core.types.settings.defaultButtonInputFontSize,
+        height: 50px,
+        minWidth: 180px,
+        marginRight: 1em,
+        marginBottom: 1em,
+        marginLeft: 1em
+      },
+      small: {
+        fontFamily: $ui-rs-core.types.fonts.normal,
+        defaultFontSize: $ui-rs-core.types.settings.defaultButtonInputFontSize,
+        height: 50px,
+        minWidth: 180px,
+        marginRight: 1em,
+        marginBottom: 1em,
+        marginLeft: 1em
+      }
+    }
+  }
+}
+setIconButtonConfig();
 
 /*
  * Default slider setup

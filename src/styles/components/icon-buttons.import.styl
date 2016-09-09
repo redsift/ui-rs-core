@@ -1,0 +1,99 @@
+/*
+ * create-icon-button()
+ *
+ * Creates a button with an icon (e.g. for federated login buttons).
+ */
+ setup-default-icon-button($style, $colors) {
+    .rs-icon-button {
+      display: flex;
+      flex-direction: row;
+      flex: 0 auto;
+
+      min-width: $style.default.minWidth;
+      margin-top: $style.default.marginTop;
+      margin-bottom: $style.default.marginBottom;
+      margin-left: $style.default.marginLeft;
+      margin-right: $style.default.marginRight;
+
+      color: $colors.color.default;
+      border: 1px solid $colors.color.default;
+
+      text-decoration: none;
+      cursor: pointer;
+
+      font-family: $style.default.fontFamily;
+      font-size: $style.default.defaultFontSize;
+
+      // NOTE: pseudo class order matters: https://css-tricks.com/remember-selectors-with-love-and-hate/
+      &:hover {
+        color: $colors.color.hover;
+        background: $colors.background.hover;
+      }
+
+      &:active {
+        outline: none;
+        color: $colors.color.pressed;
+        background: $colors.background.pressed;
+        border: 1px solid $colors.background.pressed;
+      }
+
+      &:disabled {
+        color: $colors.color.disabled;
+        background: $colors.background.disabled;
+        border: 1px solid $colors.background.disabled;
+      }
+
+      &:focus {
+        outline: none; // Disable outline in chrome
+      }
+    }
+
+    .rs-icon-button__icon {
+      display: block;
+      width: 1.875em;
+      height: 1.875em;
+      flex: 0 0 50px;
+      background-color: #fff;
+    }
+
+    .rs-icon-button__label {
+      display: flex;
+      padding-left: 1em;
+      justify-content: flex-start;
+      align-items: center;
+      flex: 1;
+
+      background: $colors.background.default;
+
+      transition: background-color 200ms ease;
+
+      &:hover {
+        background: $colors.background.hover;
+      }
+    }
+
+    .rs-icon-button__icon__wrapper {
+      width: 2.5em;
+      height: 2.5em;
+
+      border-right: 1px solid $colors.color.default;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      background: white;
+    }
+
+    .rs-icon-button__icon__wrapper__padding {
+      /* only necessary for flexbox centering */
+    }
+
+    .rs-icon-btn--small {
+      min-width: $style.small.minWidth;
+      margin-top: $style.small.marginTop;
+      margin-bottom: $style.small.marginBottom;
+      margin-left: $style.small.marginLeft;
+      margin-right: $style.small.marginRight;
+    }
+ }
