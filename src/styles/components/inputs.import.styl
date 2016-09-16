@@ -9,7 +9,8 @@ setup-inputs($customSettings = {}) {
 		paddingTop: 0.5em,
 		paddingBottom: 0.5em,
 		paddingLeft: 0,
-		paddingRight: 0
+		paddingRight: 0,
+    borderColor: #d8d8d8
 	}
 
 	$settings = merge($defaultSettings, $customSettings);
@@ -32,7 +33,7 @@ setup-inputs($customSettings = {}) {
     vertical-align: bottom;
     background-color: #fff;
     background-repeat: no-repeat;
-    border: 1px solid #ccc;
+    border: 1px solid $settings.borderColor;
     // border-radius: 3px;
     outline: none;
     // box-shadow: inset 0 1px 2px rgba(0,0,0,0.075);
