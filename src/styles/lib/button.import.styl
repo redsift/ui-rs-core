@@ -93,7 +93,8 @@ create-default-button($settings) {
  * Creates a button with BEM style classes.
  */
  create-bem-button($name, $settings) {
-    .rs-btn--{$name} {
+    .rs-btn--{$name},
+    a.rs-btn--{$name} {
       padding-top: $settings.style.default.paddingTop;
       padding-bottom: $settings.style.default.paddingBottom;
       padding-left: $settings.style.default.paddingLeft;
@@ -131,6 +132,12 @@ create-default-button($settings) {
       &:focus {
         outline: none; // Disable outline in chrome
       }
+
+    }
+
+    a.rs-btn--{$name} {
+      box-sizing: border-box;
+      text-decoration: none;
     }
 
     .rs-btn--{$name}.rs-btn--selected {
@@ -158,7 +165,8 @@ create-default-button($settings) {
       }
     }
 
-    .rs-btn--small {
+    .rs-btn--small,
+    a.rs-btn--small {
       padding-top: $settings.style.small.paddingTop;
       padding-bottom: $settings.style.small.paddingBottom;
       padding-left: $settings.style.small.paddingLeft;
@@ -185,5 +193,12 @@ adjust-p-block-styling($typeSettings, $styleSettings) {
 
   p button.rs-btn--small  {
     margin: ($pLineHeight - $pFontSize - $styleSettings.small.paddingTop/2);
+  }
+
+  p a.rs-btn--red,
+  p a.rs-btn--blue,
+  p a.rs-btn--green,
+  p a.rs-btn--black {
+    margin: ($pLineHeight - $pFontSize);
   }
 }
