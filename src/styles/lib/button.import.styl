@@ -21,6 +21,8 @@ create-default-button($settings) {
       font-family: $settings.fontFamily;
       font-size: $settings.defaultFontSize;
 
+      transition: background 200ms ease 0s;
+
       // NOTE: pseudo class order matters: https://css-tricks.com/remember-selectors-with-love-and-hate/
       &:hover {
         color: $settings.default.color.hover;
