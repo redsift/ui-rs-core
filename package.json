@@ -1,6 +1,6 @@
 {
   "name": "@redsift/ui-rs-core",
-  "version": "0.8.9",
+  "version": "0.8.10",
   "description": "Common CSS styles and Javascript functionality for RedsiftUI.",
   "keywords": [
     "redsift-ui",
@@ -19,11 +19,13 @@
     "bezier-easing": "*"
   },
   "scripts": {
-    "start": "gulp",
-    "build": "node ./node_modules/@redsift/redsift-bundler/bin/bundle.js -c ./bundle.config.js",
+    "start": "npm run build && gulp",
+    "build": "npm run clean && node ./node_modules/@redsift/redsift-bundler/bin/bundle.js -c ./bundle.config.js",
+    "clean": "rm -rf dist/*",
     "pretest": "npm outdated",
     "test": "echo \"No test specified\" && exit 0",
-    "prepublish": "npm run build"
+    "prepublish": "npm run build",
+    "postversion": "git push --tags origin HEAD"
   },
   "devDependencies": {
     "@redsift/redsift-bundler": "^0.5.2",
